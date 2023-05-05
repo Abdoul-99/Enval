@@ -1,0 +1,130 @@
+/* #4A96A6 */
+/* #E7F9FD */
+
+
+
+  :root {
+    --dot-diameter: 120px;
+    --circle-border-width: 3px;
+    /* --default-color: gainsboro; */
+    font-family: 'Lilita One', cursive;
+  }
+  
+  
+  
+  .circle-container {
+    width: var(--dot-diameter);
+    height: var(--dot-diameter);
+    transform: rotate(-225deg);
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 75 100;
+    stroke-linecap: round;
+    margin-top: 40px;
+  }
+  
+  .circle-container__background {
+    fill: none;
+    stroke: #45a0b3;
+    stroke-width: var(--circle-border-width);
+    stroke-dasharray: 75 100;
+    stroke-linecap: round;
+  }
+  
+  .circle-container__progress {
+    fill: none;
+    stroke-linecap: round;
+    stroke:#fff;
+    stroke-dasharray: 75 100;
+    stroke-linecap: round;
+    stroke-width: var(--circle-border-width);
+    transition: stroke-dashoffset 1s ease-in-out;
+  }
+ 
+
+  /* .stop1 {
+    stop-color:#e66465;
+  }
+  
+  .stop2 {
+    stop-color: #9198e5;
+  } */
+
+
+
+  :root {
+    --dot-diameter: 120px;
+    --circle-border-width: 3px;
+    --default-color: gainsboro;
+    font-family: 'Lilita One', cursive;
+    
+  }
+  
+  
+  
+  .circle-container1 {
+    width: var(--dot-diameter);
+    height: var(--dot-diameter);
+    transform: rotate(-225deg);
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 75 100;
+    stroke-linecap: round;
+    margin-top: 20px;
+    
+  }
+  
+  .circle-container__background1 {
+    fill: none;
+    stroke:#f9f9f9;
+    stroke-width: var(--circle-border-width);
+    stroke-dasharray: 75 100;
+    stroke-linecap: round;
+    
+  }
+  
+  .circle-container__progress1 {
+    fill: none;
+    stroke-linecap: round;
+    stroke:#4A96A6;
+    stroke-dasharray: 30 100;
+    stroke-linecap: round;
+    stroke-width: var(--circle-border-width);
+    transition: stroke-dashoffset 1s ease-in-out;
+    
+  }
+  
+  /* .stop1 {
+    stop-color: #e66465;
+  }
+  
+  .stop2 {
+    stop-color: #9198e5;
+  } */
+
+
+  .active {
+    background-color: #93dbea;
+    border-radius: 10px;
+  }
+  
+
+
+  @media screen and (max-width: 390px) {
+    #progress{
+     display:flex ;
+     flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    tr{
+      font-size: 10px;
+    }
+    #bat{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* @media screen and (max-width: 390px) {
+    } */

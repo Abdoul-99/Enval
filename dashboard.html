@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+<body class=" d-flex" style="background-color:#E7F9FD;">
+    <!-- sidbar -->
+    <div class="left  flex-column col-xl-2 col-lg-3 col-md-1 p-3 bg-body-tertiary ">
+        <div class="sidbar">
+
+            <div>
+                <img class="d-none d-lg-block" src="Enval image.png" alt="" style="width:90%;">
+            </div>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="active">
+                    <a href="dashboard.html" class="nav-link text-dark" aria-current="page">
+                        <i class="bi bi-grid"></i>
+                        <span class="d-none d-lg-inline"> Dashboard </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="Facture.html" class="nav-link text-dark">
+                        <i class="bi bi-person-circle"></i>
+                        <span class="d-none d-lg-inline">Facture</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="command.html" class="nav-link text-dark">
+                        <i class="bi bi-car-front-fill"></i>
+                        <span class="d-none d-lg-inline">Commande</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="suivi.html" class="nav-link text-dark">
+                        <i class="bi bi-bag-dash"></i>
+                        <span class="d-none d-lg-inline">Suivi</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="serviceclient.html" class="nav-link text-dark">
+                        <i class="bi bi-chat-left-text"></i>
+                        <span class="d-none d-lg-inline">Service Client</span>
+                    </a>
+                </li>
+            </ul>
+            <div style="margin-top: 700px;">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a href="#" class="nav-link text-dark">
+                            <i class="bi bi-gear"></i>
+                            <span class="d-none d-lg-inline">Paramètres Compte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="nav-link text-dark">
+                            <i class="bi bi-box-arrow-left"></i>
+                            <span class="d-none d-lg-inline">Déconnexion</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="right d-flex flex-column  col-sm-11 col-lg-9 ms-4">
+        <!-- debut navbar -->
+        <div class="navbar bg-light ms- flex-row-reverse">
+            <nav class="navbar bg-body-tertiar">
+                <div class="container justify-content-end">
+                    <a class="navbar-brand" href="#">
+                        <i class="bi bi-bell me-5"></i>
+                        <img src="b.png" alt="Bootstrap" width="60" style="border-radius: 100%;">
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <!-- fin navbar -->
+        <!-- debut contenu -->
+        <div class="contenu flex-column">
+            <!-- debut progress bar -->
+            <div class="d-flex gap-5" id="progress">
+                <!-- progress positive -->
+                <div class="positive ms-3 mt-4" style="text-align: center;">
+                    <div>
+                        <h6>Analyses pasitives</h6>
+                    </div>
+                    <div style="background:#4A96A6; border: none; border-radius: 10px; height: 300px; width: 250px;margin-top: 40px;padding: 10px;">
+                        <i style="margin-top: 10px; font-size: 30px;color: #ffffff; display:flex;justify-content: center;"
+                            class="bi bi-lightning-charge-fill"></i>
+                        <h3 style="text-align: center;color: #fff;">Positif</h3>
+                        <div>
+                            <svg class="circle-container" viewBox="2 -2 28 36" xmlns="http://www.w3.org/2000/svg">
+                                <linearGradient id="gradient">
+                                    <stop class="stop1" offset="0%" />
+                                    <stop class="stop2" offset="100%" />
+                                </linearGradient>
+                                <circle class="circle-container__background" r="16" cx="16" cy="16"
+                                    shape-rendering="geometricPrecision"></circle>
+                                <circle class="circle-container__progress" r="16" cx="16" cy="16"
+                                    style="stroke-dashoffset: 9" shape-rendering="geometricPrecision">
+                                    <p style="font-size:40px; margin-top:-90px; color:#fff">91%</p>
+                                </circle>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin progress positive -->
+                <!-- rpogress négatuive -->
+                <div class="negative ms-3 mt-4" style="text-align:center;">
+                    <div>
+                        <h6>Analyses Negatives</h6>
+                    </div>
+                    <div id="negative" style="background: #fff; border: 1px solid;border-color: #4A96A6; border-radius: 10px; height: 300px; width: 250px;margin-top: 40px;">
+                        <i style="font-size: 40px;background-color: #a2dae9;width: fit-content; color:#4A96A6;margin: 10px auto auto auto;border-radius: 50%; display: flex; justify-content: center;padding: 5px;" class="bi bi-droplet-fill"></i>
+                        <h3 style="text-align: center;">Negatif</h3>
+                        <div>
+                            <svg class="circle-container1" viewBox="2 -2 28 36" xmlns="http://www.w3.org/2000/svg">
+                                <linearGradient id="gradient">
+                                  <stop class="stop3" offset="0%" />
+                                  <stop class="stop4" offset="100%" />
+                                </linearGradient>
+                                <circle class="circle-container__background1" r="16" cx="16" cy="16" shape-rendering="geometricPrecision"></circle>
+                                <circle class="circle-container__progress1" r="16" cx="16" cy="16" style="stroke-dashoffset: 20" shape-rendering="geometricPrecision">
+                                    <h1 style="margin-left: 5px;  margin-top:-80px; font-size:35px; ">9%</h1>
+                                </circle>
+                              </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- fin progress négative -->
+            </div>
+            <!-- fin progress bar -->
+            <!-- debut chart bar -->
+            <div class="chart  mt-5">
+                <h3 style="margin-left: 10px;">Analyses par mois </h3>
+                <div style="margin-top: 50px;">
+                    <canvas id="myChart"></canvas>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                    const ctx = document.getElementById('myChart');
+
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['JAN', 'FEV', 'MARS', 'AVRIL', 'MAI', 'JUN', 'JUL', 'AOUT', 'SEPT', 'OCT', 'NOV', 'DEC'],
+                            datasets: [{
+                                data: [18, 10, 20, 8, 17, 5, 8, 14, 14, 13, 12, 16],
+                                barPercentage:0.5,
+                                backgroundColor: 'rgb(255, 255, 255)',
+                                hoverBackgroundColor: 'rgb(74,149,166)',
+
+
+                            }]
+                        },
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    display: false,
+                                },
+                                x:{
+                                    border:{
+                                        display:false,
+                                    },
+                                    grid:{
+                                        color:'white'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                </script>
+            </div>
+            <!-- fin chart bar -->
+
+
+        </div>
+        <!-- fin contenu -->
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
